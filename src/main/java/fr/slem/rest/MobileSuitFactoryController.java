@@ -23,9 +23,9 @@ import java.util.stream.Collectors;
 @RestController
 public class MobileSuitFactoryController {
 
-    public static final String API_ROOT_RESOURCE = "mobilesuits";
+    public static final String API_ROOT_RESOURCE = "/mobilesuits";
 
-    public static final String SEARCH_RESOURCE = "search";
+    public static final String SEARCH_RESOURCE = "/search";
 
     public static final String PARAM_ID = "idmobilesuit";
 
