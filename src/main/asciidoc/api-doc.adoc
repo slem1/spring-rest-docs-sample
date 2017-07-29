@@ -15,3 +15,18 @@ include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/http-response
 Response body:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/response-body.adoc[]
+
+
+== Retrieve one mobile suit by its identifier
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/http-request.adoc[]
+
+Response body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-body.adoc[]
+
+Response fields description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-fields.adoc[]
