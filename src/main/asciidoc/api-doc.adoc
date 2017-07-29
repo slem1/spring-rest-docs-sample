@@ -16,6 +16,10 @@ Response body:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/response-body.adoc[]
 
+Response fields description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/response-fields.adoc[]
+
 
 == Retrieve one mobile suit by its identifier
 

@@ -40,7 +40,9 @@ public class MobileSuitFactoryControllerRestDocsTest {
         mockMvc.perform(RestDocumentationRequestBuilders.get(MobileSuitFactoryController.API_ROOT_RESOURCE)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}"));
+                .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}",
+                        PayloadDocumentation.responseFields(PayloadDocumentation.fieldWithPath("[]")
+                                .description("Array of mobile suits")).andWithPrefix("[]", ModelDescription.mobileSuit())));
     }
 
     @Test
