@@ -1,0 +1,86 @@
+== Retrieve all mobile suits
+
+Example of curl command:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/curl-request.adoc[]
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/http-request.adoc[]
+
+Example of http response:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/http-response.adoc[]
+
+Response body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/response-body.adoc[]
+
+Response fields description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/response-fields.adoc[]
+
+
+== Retrieve one mobile suit by its identifier
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/http-request.adoc[]
+
+Path parameters description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/path-parameters.adoc[]
+
+Response body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-body.adoc[]
+
+Response fields description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-fields.adoc[]
+
+
+== Retrieve a mobile suit by its model name
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/searchByModelName/http-request.adoc[]
+
+Request parameters description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/searchByModelName/request-parameters.adoc[]
+
+Response body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/searchByModelName/response-body.adoc[]
+
+
+== Create a new mobile suit
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/http-request.adoc[]
+
+Request body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/request-body.adoc[]
+
+Request fields description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/request-fields.adoc[]
+
+
+== Retrieve an authentication token
+
+Example of http request:
+
+include::{snippets}/AuthControllerRestDocsTest/tokens/http-request.adoc[]
+
+Headers description:
+
+include::{snippets}/AuthControllerRestDocsTest/tokens/request-headers.adoc[]
+
+Response body:
+
+include::{snippets}/AuthControllerRestDocsTest/tokens/response-body.adoc[]
+
