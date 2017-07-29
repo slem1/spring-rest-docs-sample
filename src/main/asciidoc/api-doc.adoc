@@ -61,10 +61,26 @@ Example of http request:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/http-request.adoc[]
 
-Example of request body:
+Request body:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/request-body.adoc[]
 
 Request fields description:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/request-fields.adoc[]
+
+
+== Retrieve an authentication token
+
+Example of http request:
+
+include::{snippets}/AuthControllerRestDocsTest/tokens/http-request.adoc[]
+
+Headers description:
+
+include::{snippets}/AuthControllerRestDocsTest/tokens/request-headers.adoc[]
+
+Response body:
+
+include::{snippets}/AuthControllerRestDocsTest/tokens/response-body.adoc[]
+
