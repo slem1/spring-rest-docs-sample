@@ -1,5 +1,7 @@
 package fr.slem.dto;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,8 +10,11 @@ import java.util.List;
  */
 public class MobileSuitPostDto implements Serializable {
 
+    @NotNull
     private String modelName;
 
+    @NotNull
+    @Size(min = 1)
     private List<String> weapons;
 
     public String getModelName() {

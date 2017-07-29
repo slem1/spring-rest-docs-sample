@@ -34,3 +34,18 @@ include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-bod
 Response fields description:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-fields.adoc[]
+
+
+== Create a new mobile suit
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/http-request.adoc[]
+
+Example of request body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/request-body.adoc[]
+
+Request fields description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/create/request-fields.adoc[]

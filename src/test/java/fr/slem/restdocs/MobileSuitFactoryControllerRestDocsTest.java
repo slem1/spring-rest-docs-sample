@@ -1,5 +1,7 @@
 package fr.slem.restdocs;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import fr.slem.dto.MobileSuitPostDto;
 import fr.slem.rest.MobileSuitFactoryController;
 import fr.slem.restdocs.utils.ModelDescription;
 import org.junit.Before;
@@ -15,6 +17,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import java.util.Arrays;
 
 /**
  * @author slemoine
@@ -52,5 +56,22 @@ public class MobileSuitFactoryControllerRestDocsTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}",
                         PayloadDocumentation.responseFields(ModelDescription.mobileSuit())));
+    }
+
+    @Test
+    public void create() throws Exception {
+        MobileSuitPostDto mobileSuitPostDto = new MobileSuitPostDto();
+        mobileSuitPostDto.setModelName("MS-09RS Rick Dom");
+        mobileSuitPostDto.setWeapons(Arrays.asList("Heat Saber", "Scattering Beam Gun", "Machine Gun", "Bazooka"));
+        ObjectMapper objectMapper = new ObjectMapper();
+        String content = objectMapper.writeValueAsString(mobileSuitPostDto);
+
+        mockMvc.perform(RestDocumentationRequestBuilders.post(MobileSuitFactoryController.API_ROOT_RESOURCE)
+                .accept(MediaType.APPLICATION_JSON)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(content))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}", PayloadDocumentation.requestFields(ModelDescription.mobileSuitPostDto())));
+
     }
 }
