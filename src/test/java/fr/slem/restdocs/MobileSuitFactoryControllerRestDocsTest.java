@@ -13,6 +13,7 @@ import org.springframework.restdocs.JUnitRestDocumentation;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;
 import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
 import org.springframework.restdocs.payload.PayloadDocumentation;
+import org.springframework.restdocs.request.RequestDocumentation;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
@@ -51,11 +52,15 @@ public class MobileSuitFactoryControllerRestDocsTest {
 
     @Test
     public void getById() throws Exception {
-        mockMvc.perform(RestDocumentationRequestBuilders.get(MobileSuitFactoryController.API_ROOT_RESOURCE+"/1")
+
+        mockMvc.perform(RestDocumentationRequestBuilders.get(MobileSuitFactoryController.API_ROOT_RESOURCE
+                + "/{" + MobileSuitFactoryController.PARAM_ID + "}", 1)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}",
-                        PayloadDocumentation.responseFields(ModelDescription.mobileSuit())));
+                        PayloadDocumentation.responseFields(ModelDescription.mobileSuit()),
+                        RequestDocumentation.pathParameters(
+                                RequestDocumentation.parameterWithName(MobileSuitFactoryController.PARAM_ID).description("Mobile suit's id"))));
     }
 
     @Test

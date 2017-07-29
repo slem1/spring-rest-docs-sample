@@ -27,6 +27,10 @@ Example of http request:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/http-request.adoc[]
 
+Path parameters description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/path-parameters.adoc[]
+
 Response body:
 
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-body.adoc[]
