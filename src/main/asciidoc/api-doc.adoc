@@ -40,6 +40,21 @@ Response fields description:
 include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getById/response-fields.adoc[]
 
 
+== Retrieve a mobile suit by its model name
+
+Example of http request:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/searchByModelName/http-request.adoc[]
+
+Request parameters description:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/searchByModelName/request-parameters.adoc[]
+
+Response body:
+
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/searchByModelName/response-body.adoc[]
+
+
 == Create a new mobile suit
 
 Example of http request:

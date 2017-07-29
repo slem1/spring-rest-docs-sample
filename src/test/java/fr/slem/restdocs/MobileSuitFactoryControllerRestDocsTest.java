@@ -2,6 +2,7 @@ package fr.slem.restdocs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.slem.dto.MobileSuitPostDto;
+import fr.slem.model.MobileSuit;
 import fr.slem.rest.MobileSuitFactoryController;
 import fr.slem.restdocs.utils.ModelDescription;
 import org.junit.Before;
@@ -77,6 +78,29 @@ public class MobileSuitFactoryControllerRestDocsTest {
                 .content(content))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}", PayloadDocumentation.requestFields(ModelDescription.mobileSuitPostDto())));
+
+    }
+
+    @Test
+    public void searchByModelName() throws Exception {
+
+        final MobileSuit expectedResult = new MobileSuit();
+        expectedResult.setId(1L);
+        expectedResult.setModelName("RX-78");
+        expectedResult.setWeapons(Arrays.asList("Saber", "Rifle"));
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        String expectedJson = objectMapper.writeValueAsString(Arrays.asList(expectedResult));
+
+        mockMvc.perform(RestDocumentationRequestBuilders.get(MobileSuitFactoryController.API_ROOT_RESOURCE + MobileSuitFactoryController.SEARCH_RESOURCE)
+                .accept(MediaType.APPLICATION_JSON)
+                .param(MobileSuitFactoryController.PARAM_MODEL_NAME, "RX"))
+                .andExpect(MockMvcResultMatchers.content().json(expectedJson))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}",
+                        RequestDocumentation.requestParameters(
+                                RequestDocumentation.parameterWithName(MobileSuitFactoryController.PARAM_MODEL_NAME).description("Mobile suit's model name"))));
 
     }
 }
