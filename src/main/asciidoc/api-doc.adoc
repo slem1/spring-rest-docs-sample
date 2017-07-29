@@ -2,16 +2,16 @@
 
 Example of curl command:
 
-include::{snippets}/getAll/curl-request.adoc[]
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/curl-request.adoc[]
 
 Example of http request:
 
-include::{snippets}/getAll/http-request.adoc[]
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/http-request.adoc[]
 
 Example of http response:
 
-include::{snippets}/getAll/http-response.adoc[]
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/http-response.adoc[]
 
 Response body:
 
-include::{snippets}/getAll/response-body.adoc[]
+include::{snippets}/MobileSuitFactoryControllerRestDocsTest/getAll/response-body.adoc[]

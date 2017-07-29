@@ -38,6 +38,6 @@ public class MobileSuitFactoryControllerRestDocsTest {
         mockMvc.perform(RestDocumentationRequestBuilders.get(MobileSuitFactoryController.API_ROOT_RESOURCE)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andDo(MockMvcRestDocumentation.document("getAll"));
+                .andDo(MockMvcRestDocumentation.document("{ClassName}/{methodName}"));
     }
 }
